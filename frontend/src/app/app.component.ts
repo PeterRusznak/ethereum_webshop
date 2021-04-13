@@ -40,7 +40,7 @@ export class AppComponent {
       await tx2.wait();
 
       await new Promise(resolve => setTimeout(resolve, 5000));
-      this.backendService.getDownloadbleUrl(res.paymentId).subscribe(r => {
+      this.backendService.getDownloadableUrl(res.paymentId).subscribe(r => {
         this.downloadUrl = r.url
       })
     });
@@ -70,6 +70,5 @@ export class AppComponent {
         this.contracts.push(dai)
       }
     });
-
   }
 }

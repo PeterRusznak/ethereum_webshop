@@ -23,7 +23,7 @@ export class BackendService {
     return this.http_client.get<PaymentIdConfig>(requestUrl);
   }
 
-  getDownloadbleUrl(paymentId: string): Observable<DownloadUrlConfig> {
+  getDownloadableUrl(paymentId: string): Observable<DownloadUrlConfig> {
     const requestUrl = this.url + "getUrl/" + paymentId;
     console.log(requestUrl);
     return this.http_client.get<DownloadUrlConfig>(requestUrl);
